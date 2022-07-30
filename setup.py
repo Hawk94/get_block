@@ -2,19 +2,20 @@ from setuptools import setup
 
 
 def readme():
-    with open('README.rst') as f:
+    with open('README.md') as f:
         return f.read()
 
 
-setup(name='getBlock',
-      version='0.1',
+setup(name='get_block',
+      version='0.0.1',
       description='Get details about a block provided in hex',
       long_description=readme(),
+      long_description_content_type="text/markdown",
       classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3.7',
-        'Topic :: Ethereum :: Validator',
+        'Programming Language :: Python :: 3.9',
+        'Topic :: Utilities',
       ],
       keywords='ethereum validator',
       author='Hawk94',
