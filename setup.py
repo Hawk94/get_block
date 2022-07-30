@@ -7,7 +7,7 @@ def readme():
 
 
 setup(name='get_block',
-      version='0.0.4',
+      version='0.0.5',
       description='Get details about a block provided in hex',
       long_description=readme(),
       long_description_content_type="text/markdown",
@@ -24,6 +24,8 @@ setup(name='get_block',
       packages=['get_block'],
       install_requires=[
           'markdown',
+          'humanize',
+          'requests'
       ],
       entry_points={
           'console_scripts': ['getBlock=get_block.cli:main'],
