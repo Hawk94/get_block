@@ -21,7 +21,7 @@ def main():
     args = parser.parse_args()
     try:
         blockTimestamp = getBlockTimestamp(args.apiKey, args.blockId)
-        print(f"Block created: {blockTimestamp}")
+        print(f"Block created {blockTimestamp}")
     except Exception:
         print("Error: Invalid block id. \n")
         parser.print_help()

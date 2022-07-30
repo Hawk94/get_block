@@ -1,5 +1,6 @@
-import datetime
+import datetime as dt
 
+import humanize
 import requests
 
 ETHERSCAN_BASE_URL = "https://api.etherscan.io/api"
@@ -11,5 +12,8 @@ def getBlockTimestamp(apiKey, blockId):
     block = res.json()
     blockTimestamp = block['result']['timestamp']
     blockTimeDecimal = float(int(blockTimestamp[2:], 16))
+    blockDate = dt.datetime.utcfromtimestamp(blockTimeDecimal)
 
-    return datetime.datetime.utcfromtimestamp(blockTimeDecimal)
+    preciseDelta = humanize.precisedelta(dt.datetime.now() - blockDate, minimum_unit='minutes')
+
+    return f"{preciseDelta} ago"

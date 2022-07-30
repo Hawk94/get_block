@@ -7,7 +7,7 @@ def readme():
 
 
 setup(name='get_block',
-      version='0.0.1',
+      version='0.0.2',
       description='Get details about a block provided in hex',
       long_description=readme(),
       long_description_content_type="text/markdown",
